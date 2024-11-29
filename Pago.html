@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procesar Pago</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html">
+            <img class="header_logo" src="img/logo.png" alt="Tienda">
+        </a>
+    </header>
+
+    <div class="nav-bg">
+        <nav class="navegacion_principal contenedor">
+            <a class="navegacion_enlace" href="index.html">Inicio</a>
+            <a class="navegacion_enlace" href="tienda.html">Tienda</a>
+            <a class="navegacion_enlace" href="nosotros.html">Nosotros</a>
+            <a class="navegacion_enlace" href="contacto.html">Contacto</a>
+        </nav>
+    </div>
+
+    <main class="contenedor sombra">
+        <h1>Formulario de Pago</h1>
+        <p>Completa los datos a continuación para procesar tu compra.</p>
+
+        <form action="procesar_pago.php" method="POST" class="formulario">
+            <!-- Información personal -->
+            <fieldset>
+                <legend>Información Personal</legend>
+                <div class="campo">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+                </div>
+                <div class="campo">
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" name="correo" placeholder="Ingresa tu correo" required>
+                </div>
+                <div class="campo">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ingresa tu número de teléfono" required>
+                </div>
+            </fieldset>
+
+            <!-- Dirección de envío -->
+            <fieldset>
+                <legend>Dirección de Envío</legend>
+                <div class="campo">
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" id="direccion" name="direccion" placeholder="Ingresa tu dirección" required>
+                </div>
+                <div class="campo">
+                    <label for="ciudad">Ciudad:</label>
+                    <input type="text" id="ciudad" name="ciudad" placeholder="Ingresa tu ciudad" required>
+                </div>
+                <div class="campo">
+                    <label for="codigo-postal">Código Postal:</label>
+                    <input type="text" id="codigo-postal" name="codigo_postal" placeholder="Ingresa tu código postal" required>
+                </div>
+            </fieldset>
+
+            <!-- Método de pago -->
+            <fieldset>
+                <legend>Método de Pago</legend>
+                <div class="campo">
+                    <label for="metodo-pago">Selecciona un método:</label>
+                    <select id="metodo-pago" name="metodo_pago" required>
+                        <option value="tarjeta">Tarjeta de Crédito/Débito</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="transferencia">Transferencia Bancaria</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label for="numero-tarjeta">Número de Tarjeta:</label>
+                    <input type="text" id="numero-tarjeta" name="numero_tarjeta" placeholder="1234 5678 9123 4567" pattern="[0-9\s]{13,19}" maxlength="19">
+                </div>
+                <div class="campo">
+                    <label for="fecha-expiracion">Fecha de Expiración:</label>
+                    <input type="month" id="fecha-expiracion" name="fecha_expiracion" required>
+                </div>
+                <div class="campo">
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="123" pattern="[0-9]{3}" maxlength="3">
+                </div>
+            </fieldset>
+
+            <!-- Resumen de compra -->
+            <fieldset>
+                <legend>Resumen de Compra</legend>
+                <div id="resumen-compra">
+                    <p><strong>Producto:</strong> Nombre del producto</p>
+                    <p><strong>Cantidad:</strong> 1</p>
+                    <p><strong>Total:</strong> $0</p>
+                </div>
+            </fieldset>
+
+            <!-- Botón para enviar -->
+            <div class="alinear-derecha">
+                <button type="submit" class="boton">Procesar Pago</button>
+            </div>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <div class="contenedor footer-contenido">
+            <div class="footer-logo">
+                <img src="img/logo-footer.png" alt="Logo de la empresa" class="logo-footer">
+            </div>
+
+            <div class="footer-enlaces">
+                <h3 class="footer-titulo">Enlaces de interés</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="tienda.html">Tienda</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contacto">
+                <h3 class="footer-titulo">Contacto</h3>
+                <p>Teléfono: +57 324 652 9853</p>
+                <p>Email: support@tienda.com</p>
+                <p>Dirección: Avenida Valencia, Bucaramanga</p>
+            </div>
+        </div>
+
+        <div class="footer-legal">
+            <p>&copy; 2024 <strong>Tienda Online</strong>. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

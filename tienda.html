@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="../img/SALES_AND_SOLUTIONS-removebg-preview.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@75..125,300..700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@75..125,300..700&display=swap');
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body> 
+    <h1>Nuestros Productos</h1>
+    <div class="nav-bg">
+        <nav class="navegacion_principal contenedor">
+            <a class="navegacion_enlace" href="index.html">Inicio</a>
+            <a class="navegacion_enlace navegacion_enlace--activo" href="tienda.html">Tienda</a>
+            <a class="navegacion_enlace" href="nosotros.html">Nosotros</a>
+            <a class="navegacion_enlace" href="contacto.html">Contacto</a>
+        </nav>
+    </div>
+
+    <div class="carrito-flotante">
+        <button id="carrito-boton" class="boton-carrito">
+            <img src="img/carrito-icono.png" alt="Carrito">
+            <span id="carrito-cantidad" class="carrito-cantidad">0</span>
+        </button>
+        <div id="carrito-detalle" class="carrito-detalle oculto">
+            <h3>Carrito de Compras</h3>
+            <ul id="lista-carrito">
+                <!-- Los productos añadidos se mostrarán aquí -->
+            </ul>
+            <p id="total-carrito"><strong>Total:</strong> $0</p>
+            <a href="Pago.html" id="boton-ir-a-pagar" class="boton-pagar oculto">Ir a Pagar</a>
+        </div>
+    </div>
+    
+    <header class="header">
+        <a href="index.html"></a>
+        <img class="header_logo" src="img/logo.png" alt="logostore">
+    </header>
+
+    <main class="contenedorTienda">
+        <div class="grid">
+            <div class="producto">
+                <img class="producto_imagen" src="img/1.jpeg" alt="imagenproducto">
+                <a href="producto.html?id=1">
+                    <div class="producto_informacion">
+                        <p class="producto_nombre">Portátil Acer, 8 GB Ram, AMD Raizen 5, 512 SSD</p>
+                        <p class="producto_precio">$1'850.000</p>
+                    </div>
+                </a>
+                <button class="boton-compra" data-id="1" data-nombre="Portátil Acer, 8 GB Ram, AMD Raizen 5, 512 SSD" data-precio="1850000">Añadir al carrito</button>
+            </div>
+            <div class="producto">
+                <img class="producto_imagen" src="img/2.jpeg" alt="imagenproducto">
+                <a href="producto.html?id=2">
+                    <div class="producto_informacion">
+                        <p class="producto_nombre">PC Lenovo 8 GB RAM, Intel Core i5, 1TB SSD</p>
+                        <p class="producto_precio">$2'250.000</p>
+                    </div>
+                </a>
+                <button class="boton-compra" data-id="2" data-nombre="PC Lenovo 8 GB RAM, Intel Core i5, 1TB SSD" data-precio="2250000">Añadir al carrito</button>
+            </div>
+            <div class="producto">
+                <img class="producto_imagen" src="img/3.jpg" alt="imagenproducto">
+                <a href="producto.html?id=3">
+                    <div class="producto_informacion">
+                        <p class="producto_nombre">Silla Gamer Rosa y Negro</p>
+                        <p class="producto_precio">$180.000</p>
+                    </div>
+                </a>
+                <button class="boton-compra" data-id="3" data-nombre="Silla Gamer Rosa y Negro" data-precio="180000">Añadir al carrito</button>
+            </div>
+            <div class="producto">
+                <img class="producto_imagen" src="img/4.jpg" alt="imagenproducto">
+                <a href="producto.html?id=4">
+                    <div class="producto_informacion">
+                        <p class="producto_nombre">Conjunto 3 pantallas 20" para PC</p>
+                        <p class="producto_precio">$1'200.000</p>
+                    </div>
+                </a>
+                <button class="boton-compra" data-id="4" data-nombre="Conjunto 3 pantallas 20\" para PC" data-precio="1200000">Añadir al carrito</button>
+            </div>
+            <div class="producto">
+                <img class="producto_imagen" src="img/5.jpg" alt="imagenproducto">
+                <a href="producto.html?id=5">
+                    <div class="producto_informacion">
+                        <p class="producto_nombre">Portátil Lenovo, 12 GB Ram, Intel Core i7, 512 SSD</p>
+                        <p class="producto_precio">$2'950.000</p>
+                    </div>
+                </a>
+                <button class="boton-compra" data-id="5" data-nombre="Portátil Lenovo, 12 GB Ram, Intel Core i7, 512 SSD" data-precio="2950000">Añadir al carrito</button>
+            </div>
+            <div class="producto">
+                <img class="producto_imagen" src="img/6.jpg" alt="imagenproducto">
+                <a href="producto.html?id=6">
+                    <div class="producto_informacion">
+                        <p class="producto_nombre">Portátil Gaming RTX 2010, 16 GB Ram, AMD Raizen 9, 512 SSD</p>
+                        <p class="producto_precio">$4'299.000</p>
+                    </div>
+                </a>
+                <button class="boton-compra" data-id="6" data-nombre="Portátil Gaming RTX 2010, 16 GB Ram, AMD Raizen 9, 512 SSD" data-precio="4299000">Añadir al carrito</button>
+            </div>
+            <div class="producto">
+                <img class="producto_imagen" src="img/7.jpg" alt="imagenproducto">
+                <a href="producto.html?id=7">
+                    <div class="producto_informacion">
+                        <p class="producto_nombre">CPU Gamer, 32 GB Ram, NVidia RTX 4200, Intel Core i9, 2 TB SSD</p>
+                        <p class="producto_precio">$5'650.000</p>
+                    </div>
+                </a>
+                <button class="boton-compra" data-id="7" data-nombre="CPU Gamer, 32 GB Ram, NVidia RTX 4200, Intel Core i9, 2 TB SSD" data-precio="5650000">Añadir al carrito</button>
+            </div>
+            <div class="producto">
+                <img class="producto_imagen" src="img/8.jpg" alt="imagenproducto">
+                <a href="producto.html?id=8">
+                    <div class="producto_informacion">
+                        <p class="producto_nombre">Portátil Acer 4 GB Ram, Intel Core i3, 1 TB SSD</p>
+                        <p class="producto_precio">$1'650.000</p>
+                    </div>
+                </a>
+                <button class="boton-compra" data-id="8" data-nombre="Portátil Acer 4 GB Ram, Intel Core i3, 1 TB SSD" data-precio="1650000">Añadir al carrito</button>
+            </div>
+            <div class="producto">
+                <img class="producto_imagen" src="img/9.jpg" alt="imagenproducto">
+                <a href="producto.html?id=9">
+                    <div class="producto_informacion">
+                        <p class="producto_nombre">Cabina para PC Gamer + AMD Vidia RTX 3200</p>
+                        <p class="producto_precio">$1'450.000</p>
+                    </div>
+                </a>
+                <button class="boton-compra" data-id="9" data-nombre="Cabina para PC Gamer + AMD Vidia RTX 3200" data-precio="1450000">Añadir al carrito</button>
+            </div>
+            <div class="producto">
+                <img class="producto_imagen" src="img/10.jpg" alt="imagenproducto">
+                <a href="producto.html?id=10">
+                    <div class="producto_informacion">
+                        <p class="producto_nombre">Portátil Acer 8 GB Ram, AMD Raizen 5, 256 GB HDD</p>
+                        <p class="producto_precio">$1'699.000</p>
+                    </div>
+                </a>
+                <button class="boton-compra" data-id="10" data-nombre="Portátil Acer 8 GB Ram, AMD Raizen 5, 256 GB HDD" data-precio="1699000">Añadir al carrito</button>
+            </div>
+            <div class="producto">
+                <img class="producto_imagen" src="img/11.jpg" alt="imagenproducto">
+                <a href="producto.html?id=11">
+                    <div class="producto_informacion">
+                        <p class="producto_nombre">Portátil Gaming, 12 GB RAM, NVidia RTX 2100, AMD Raizen 9, 1TB SSD</p>
+                        <p class="producto_precio">$4'850.000</p>
+                    </div>
+                </a>
+                <button class="boton-compra" data-id="11" data-nombre="Portátil Gaming, 12 GB RAM, NVidia RTX 2100, AMD Raizen 9, 1TB SSD" data-precio="4850000">Añadir al carrito</button>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="contenedor footer-contenido">
+            <div class="footer-logo">
+                <img src="img/SALES_AND_SOLUTIONS-removebg-preview.png" alt="Logo de la empresa" class="logo-footer">
+            </div>
+    
+            <div class="footer-enlaces">
+                <h3 class="footer-titulo">Enlaces de interés</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="tienda.html">Tienda</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-contacto">
+                <h3 class="footer-titulo">Contacto</h3>
+                <p>Teléfono: +57 324 652 9853</p>
+                <p>Email: salesandsolutions@empresa.com</p>
+                <p>Dirección: Avenida Valencia, Bucaramanga</p>
+            </div>
+        </div>
+    
+        <div class="footer-legal">
+            <p>&copy; 2024 <strong>Sales and Solutions</strong>. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+       class Carrito {
+            constructor() {
+                this.productos = [];
+                this.carritoBoton = document.getElementById('carrito-boton');
+                this.carritoDetalle = document.getElementById('carrito-detalle');
+                this.listaCarrito = document.getElementById('lista-carrito');
+                this.totalCarrito = document.getElementById('total-carrito');
+                this.cantidadCarrito = document.getElementById('carrito-cantidad');
+                this.botonIrAPagar = document.getElementById('boton-ir-a-pagar');
+
+                this.inicializarEventListeners();
+                this.cargarCarritoDesdeLocalStorage();
+                this.actualizarVistaCarrito(); // Añadido para mostrar carrito inicial
+            }
+
+            inicializarEventListeners() {
+                // Delegación de eventos para botones de añadir al carrito
+                document.querySelector('.contenedorTienda').addEventListener('click', (e) => {
+                    if (e.target.classList.contains('boton-compra')) {
+                        const producto = {
+                            id: e.target.dataset.id,
+                            nombre: e.target.dataset.nombre,
+                            precio: parseFloat(e.target.dataset.precio)
+                        };
+                        this.agregarProducto(producto);
+                    }
+                });
+
+                // Toggle del carrito flotante
+                this.carritoBoton.addEventListener('click', () => {
+                    this.carritoDetalle.classList.toggle('oculto');
+                    if (!this.carritoDetalle.classList.contains('oculto')) {
+                        this.actualizarVistaCarrito();
+                    }
+                });
+            }
+
+            agregarProducto(producto) {
+                const productoExistente = this.productos.find(p => p.id === producto.id);
+                
+                if (productoExistente) {
+                    productoExistente.cantidad += 1;
+                } else {
+                    producto.cantidad = 1;
+                    this.productos.push(producto);
+                }
+
+                this.actualizarCarrito();
+                this.carritoDetalle.classList.remove('oculto'); // Mostrar carrito al añadir producto
+                this.actualizarVistaCarrito();
+            }
+
+            actualizarCarrito() {
+                // Guardar en localStorage
+                localStorage.setItem('carrito', JSON.stringify(this.productos));
+
+                // Actualizar cantidad de productos
+                const cantidadTotal = this.productos.reduce((total, producto) => total + producto.cantidad, 0);
+                this.cantidadCarrito.textContent = cantidadTotal;
+
+                // Mostrar/ocultar botón de pagar
+                this.botonIrAPagar.classList.toggle('oculto', this.productos.length === 0);
+            }
+
+            cargarCarritoDesdeLocalStorage() {
+                const carritoGuardado = localStorage.getItem('carrito');
+                if (carritoGuardado) {
+                    this.productos = JSON.parse(carritoGuardado);
+                    this.actualizarCarrito();
+                }
+            }
+
+            actualizarVistaCarrito() {
+                // Limpiar lista actual
+                this.listaCarrito.innerHTML = '';
+
+                // Calcular total
+                let total = 0;
+
+                // Agregar productos al carrito
+                this.productos.forEach(producto => {
+                    const subtotal = producto.precio * producto.cantidad;
+                    total += subtotal;
+
+                    const li = document.createElement('li');
+                    li.innerHTML = `
+                        ${producto.nombre} 
+                        - Cantidad: ${producto.cantidad} 
+                        - $${subtotal.toLocaleString()}
+                        <button class="eliminar-producto" data-id="${producto.id}">X</button>
+                    `;
+                    this.listaCarrito.appendChild(li);
+                });
+
+                // Actualizar total
+                this.totalCarrito.innerHTML = `<strong>Total:</strong> $${total.toLocaleString()}`;
+
+                // Mostrar/ocultar botón de pagar
+                this.botonIrAPagar.classList.toggle('oculto', this.productos.length === 0);
+
+                // Agregar listeners para eliminar productos
+                const botonesEliminar = this.listaCarrito.querySelectorAll('.eliminar-producto');
+                botonesEliminar.forEach(boton => {
+                    boton.addEventListener('click', (e) => {
+                        const idProducto = e.target.dataset.id;
+                        this.eliminarProducto(idProducto);
+                    });
+                });
+            }
+
+            eliminarProducto(id) {
+                const index = this.productos.findIndex(p => p.id === id);
+                if (index !== -1) {
+                    this.productos.splice(index, 1);
+                    this.actualizarCarrito();
+                    this.actualizarVistaCarrito();
+                }
+            }
+        }
+
+        // Inicializar el carrito
+        const carrito = new Carrito();
+    </script>
+
+    
+</body>
+</html>
